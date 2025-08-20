@@ -13,3 +13,6 @@ add_service(system_server, app_lock_service);
 
 # Use HALs
 hal_client_domain(system_server, hal_lineage_powershare)
+
+# Trust
+get_prop(system_server, vendor_security_patch_level_prop)

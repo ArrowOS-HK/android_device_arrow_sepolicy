@@ -1,8 +1,8 @@
 # Allow NFC service to be found
 allow platform_app nfc_service:service_manager find;
 
-# Allow externalstorage access
-allow platform_app mnt_pass_through_file:dir { create_dir_perms mounton };
+# Allow storage access to files app
+allow platform_app mnt_pass_through_file:dir { getattr search };
 
 # Allow bypassing the FUSE layer
 r_dir_file(platform_app, mnt_pass_through_file)
